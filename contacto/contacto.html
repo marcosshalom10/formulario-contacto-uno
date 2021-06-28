@@ -1,0 +1,80 @@
+<!-- 
+Formulario de Contacto Animado
+Autor(es): Marcos Shalom Saada
+           Dilan Michael Martínez Escobedo
+Fecha: 19/10/2019
+-->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="./contacto.css">
+
+</head>
+<body>
+  <input id="abrir-cerrar" name="abrir-cerrar" type="checkbox" value="" />
+    <label for="abrir-cerrar">
+        &#9776; <span class="abrir">Abrir Menú</span><span class="cerrar">Cerrar Menú</span>
+    </label>
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="#">Ingreso</a></li>
+            <li><a href="#">Resgistro</a></li>
+            <li><a href="#">MuteWords</a></li>
+            <li><a href="#">Colores</a></li>
+            <li><a href="#">Animales</a></li>
+            <li><a href="#">Abecedario</a></li>
+            <li><a href="#">Números</a></li>
+            </ul>
+    </div>
+
+  <form><div id="container"></div>
+  <script id="template">
+    <div class="contact-wrapper">
+        <div class="envelope {{ flipCard ? 'active' : '' }}">
+          <div class="back paper"></div>
+          <div class="content">
+            <div class="form-wrapper">
+              <form>
+                <div class="top-wrapper">
+                  <div class="input">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="&#128107; Nombre" name="name"/>
+                  </div>
+                  <div class="input">
+                    <label>Teléfono</label>
+                    <input type="text" placeholder="&#128241; Teléfono" name="phone"/>
+                  </div>
+                  <div class="input">
+                    <label>Correo</label>
+                    <input type="text" placeholder="&#128233; Correo" name="_replyto"/>
+                  </div>
+                </div>
+                <div class="bottom-wrapper">
+                  <div class="input">
+                    <label>Asunto</label>
+                    <input type="text" placeholder="&#128578; Asunto" name="_subject"/>
+                  </div>
+                  <div class="input">
+                    <label>Mensaje</label>
+                    <textarea rows="5" placeholder="&#128395; Mensaje" name="message"></textarea>
+                  </div>
+                  <div class="submit">
+                    <div class="submit-card" on-click="toggle('flipCard')">Enviar</div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="front paper"></div>
+        </div>
+      </div>
+    
+  </script></form>
+  
+  <script src='https://cdn.jsdelivr.net/npm/ractive@0.9'></script><script  src="./contacto.js"></script>
+
+</body>
+</html>
